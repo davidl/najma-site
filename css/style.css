@@ -98,6 +98,8 @@
   --bs-body-color: var(--nt-gradient-dark);
   --bs-dark-rgb: 1, 18, 6;
 
+  --nt-btn-border-bottom-width: 0.25em;
+
   .btn-primary {
     --bs-btn-color: var(--nt-light-beige);
     --bs-btn-bg: var(--nt-dark-green);
@@ -111,8 +113,6 @@
     --bs-btn-active-border-color: var(--nt-darker-green);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   }
-
-  --nt-btn-border-bottom-width: 0.25em;
   /* End overrides */
 }
 
@@ -10942,6 +10942,7 @@ a.btn-primary:link,
 a.btn-primary:visited {
   background-color: var(--nt-dark-green);
   border-bottom: var(--nt-btn-border-bottom-width) solid var(--nt-darker-green);
+  border-color: var(--nt-darker-green);
   border-radius: 0.5em;
   box-shadow: 0 2px 3px #ccc;
   position: relative;
