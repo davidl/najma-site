@@ -54,7 +54,7 @@
             </figcaption>
           </figure>
           <div class="card umrah mt-5">
-            <img src="img/umrah-flyer-nov-2023.png" class="card-img-top" alt="flyer for Najma's November 2023 Umrah package">
+            <img src="img/umrah-flyer-nov-2023.png" class="card-img-top" alt="flyer for Najma's November 2023 Umrah package" loading="lazy">
             <div class="card-body">
               <h5 class="card-title highlight text-center">Umrah November 19-29 2023</h5>
               <div class="container mb-3">
@@ -149,7 +149,29 @@
       <p class="fs-small m-0 text-center text-white">Copyright &copy; Najma Tours and Travel <span id="year">2023</span>. All Rights Reserved.</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
+  <script>
+    document.getElementById('year').textContent = /\d{4}/.exec(Date())[0];
+    window.addEventListener('DOMContentLoaded', event => {
+      const mainNav = document.body.querySelector('#mainNav');
+      if (mainNav) {
+        new bootstrap.ScrollSpy(document.body, {
+          target: '#mainNav',
+          rootMargin: '0px 0px -40%',
+        });
+      };
+      const navbarToggler = document.body.querySelector('.navbar-toggler');
+      const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .nav-link')
+      );
+      responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () => {
+          if (window.getComputedStyle(navbarToggler).display !== 'none') {
+            navbarToggler.click();
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
