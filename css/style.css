@@ -10912,8 +10912,9 @@ h2,
 .blockquote-footer a:visited,
 .blockquote-footer a:active,
 .blockquote-footer a:hover,
-.blockquote-footer a:focus {
-  color: var(--nt-darker-green);
+.blockquote-footer a:focus,
+.blockquote-footer::before {
+  color: var(--nt-dark-green);
 }
 
 #umrah figure {
@@ -10936,6 +10937,18 @@ h2,
 
 .umrah.card strong {
   color: var(--nt-dark-green);
+}
+
+.umrah .list-group-item {
+  padding-left: 2rem;
+}
+
+.umrah.card .list-group-item strong::before {
+  content: "✅";
+  font-size: 0.75rem;
+  left: 0.5rem;
+  position: absolute;
+  top: calc(1rem - 4px);
 }
 
 a.btn-primary:link,
