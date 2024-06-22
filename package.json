@@ -1,10 +1,10 @@
 {
   "name": "najma-tours-travel-web-site",
   "version": "0.0.1",
-  "description": "Web site for najmatravel.com",
+  "description": "Web site for Najma Tours and Travel - najmatravel.com",
   "private": true,
   "keywords": [
-    ""
+    "Najma", "Tours", "Travel", "Umrah"
   ],
   "license": "MIT",
   "author": "najmatravel.com",
